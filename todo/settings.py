@@ -140,6 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-42a4.up.railway.app/','https://*.127.0.0.1']
+
 
 
 
