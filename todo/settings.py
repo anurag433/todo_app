@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h_dqrca^($secv+1_takls62hh_w9&x=_vltfb46plum8*c5mh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -142,6 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://atodo.up.railway.app/','https://*.127.0.0.1']
 
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
 
 
