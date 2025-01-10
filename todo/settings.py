@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-CSRF_TRUSTED_ORIGINS = ['https://atodo.up.railway.app/','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*atodo.up.railway.app','https://*.127.0.0.1']
 
 CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
