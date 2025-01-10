@@ -55,9 +55,9 @@
                         <label for="title">Priority</label>
                         <select class="form-control" id="priority" name="priority">
                             <option value="">--Select --</option>
-                            {% for i in '12345678910'|make_list %}
-                                <option value="{{ i }}">Priority {{ i }}</option>
-                            {% endfor %}
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Todo</button>
@@ -94,7 +94,7 @@
                                 </span>
                             </td>
                             <td>
-                                <span class="priority {% if todo.priority >= 7 %}priority-high{% elif todo.priority >= 4 %}priority-medium{% else %}priority-low{% endif %}">
+                                <span class="priority {% if todo.priority == 'High' %}priority-high{% elif todo.priority == 'Medium' %}priority-medium{% else %}priority-low{% endif %}">
                                     {{ todo.priority }}
                                 </span>
                             </td>
