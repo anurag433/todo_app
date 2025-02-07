@@ -51,12 +51,27 @@ def register(request):
                 user.save()
                 print('user_created')
                 send_mail(
-                    "Welcome to Our Website",  # Subject
-                    f"Hello {first_name},\n\nThank you for registering on our website. \n\nYour Username : {username}",  # Message
-                    "anurag504singh@gmail.com",  # From email (you need to configure this in settings)
-                    [email],  # To email
-                    fail_silently=False,  # You can set this to True if you want to suppress email sending errors
+                    "🎉 Welcome to Our Community!",
+                    f"""
+                    🌟 "Every great journey begins with a single step – and today, you've taken yours with us!" 🚀
+
+                        Hello {first_name},
+
+                    We’re thrilled to have you on board! Your account has been successfully created .
+
+                    🔹 Your Login Details:
+                           - Username: {username}
+
+                    If you ever need help, feel free to reach out. Welcome to the family! 🎉
+
+                    Best regards,  
+                    The 2DO Team
+                    """,
+                    "anurag504singh@gmail.com",  # Replace with your verified sender email
+                    [email],
+                    fail_silently=False,  # Set to True if you want to avoid email failure crashes
                 )
+
             
                 return redirect('login')
                 

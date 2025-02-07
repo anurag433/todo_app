@@ -5,47 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style_regi.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Registration Page</title>
-  
 </head>
 <body>
     <div class="registration-container">
-        <h2>Register Here </h2>
+        <div class="form-header">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join us today and start organizing your tasks!</p>
+        </div>
+        
         <form action="register" method="post">
             {% csrf_token %}
-            <div class="input-group">
-                <label for="first_name"> First Name</label>
-                <input type="text" id="first_name" name="first_name" required>
+            
+            <div class="name-row">
+                <div class="input-group half">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                    <span class="input-highlight"></span>
+                </div>
+                <div class="input-group half">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                    <span class="input-highlight"></span>
+                </div>
             </div>
+
             <div class="input-group">
-                <label for="last_name"> Last Name</label>
-                <input type="text" id="last_name" name="last_name" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <span class="input-highlight"></span>
             </div>
+
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <span class="input-highlight"></span>
             </div>
+
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="password" id="password1" name="password1" placeholder="Password" required>
+                <span class="input-highlight"></span>
             </div>
+
             <div class="input-group">
-                <label for="password1">Password</label>
-                <input type="password" id="password1" name="password1" required>
+                <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
+                <span class="input-highlight"></span>
             </div>
-            <div class="input-group">
-                <label for="password2">Confirm Password</label>
-                <input type="password" id="password2" name="password2" required>
-            </div>
-            <button type="submit" class="register-btn">Register</button>
+
+            <button type="submit" class="register-btn">
+                <span>Create Account</span>
+            </button>
+
             <p class="login-link">
-                Already registered? <a href="login">Login here</a>
+                Already have an account? <a href="login">Sign in</a>
             </p>
         </form>
-        <div>
-            {%for message in messages%}
-            <h3>{{message}}</h3>
-            {%endfor%}
+
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message">{{ message }}</div>
+            {% endfor %}
         </div>
     </div>
 </body>
