@@ -115,7 +115,7 @@ def add(request):
 def delete(request , id ):
     print(id)
     todo = TODO.objects.get(pk = id )
-    first_name =todo.user.first_name , # beleow this  you may delete 
+    first_name =todo.user.first_name  # beleow this  you may delete 
     email = todo.user.email
     todo.delete()
     # first_name =todo.user.first_name ,
