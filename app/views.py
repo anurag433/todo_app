@@ -131,19 +131,9 @@ def delete(request , id ):
     print(id)
     todo = TODO.objects.get(pk = id )
     todo = TODO.objects.filter(id=id).first()
-    first_name =todo.user.first_name  # beleow this  you may delete 
-    email = todo.user.email
+    
     todo.delete()
-    # first_name =todo.user.first_name ,
-    # email = todo.user.email
-    send_mail(
-                    "❗️WARNING❗️",  # Subject
-                    f"Hello {first_name},\n\n You have deleted your todo ",  # Message
-                    "anurag504singh@gmail.com",  # From email (you need to configure this in settings)
-                    [email],  # To email
-                    
-                    fail_silently=True,  # You can set this to True if you want to suppress email sending errors
-                )
+
     return redirect("/")
 
 def change_status(request , id ,status):
