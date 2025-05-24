@@ -4,7 +4,7 @@
 This is a **To-Do App** built using **Django**, designed to help users manage their daily tasks efficiently. Users can add, edit, mark as completed, and delete tasks with a simple interface.
 
 ## Live Demo 🌍
-Check out the deployed app here: [atodo.up.railway.app](https://atodo.up.railway.app/)
+Check out the deployed app here: [Click now](https://todo-app-wmeu.onrender.com)
 
 ## Features ✨
 ✅ Add new tasks 📌  
