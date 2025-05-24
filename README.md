@@ -18,7 +18,7 @@ Check out the deployed app here: [atodo.up.railway.app](https://atodo.up.railway
 - **SQLite** (Database)
 - **HTML, CSS, JavaScript** (Frontend)
 - **Bootstrap** (Styling)
-- **Railway** (Deployment)
+- **Render** (Deployment)
 
 ## Installation & Setup 🏗️
 ### Prerequisites:
